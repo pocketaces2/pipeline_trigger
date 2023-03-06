@@ -5,7 +5,7 @@ pipeline {
         //Checkout the code
         stage("Preparation") {
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/pocketaces2/pipeline_trigger']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/pocketaces2/pipeline_trigger']]])
             }
         }
 
